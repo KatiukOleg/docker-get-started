@@ -1,0 +1,3 @@
+# get error message from docker build
+teladoc@FVFFM3E1Q05N app % docker build -t getting-started . 2>&1 | grep "error Your lockfile needs to be updated, but yarn was run with"                 
+#12 1.115 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
