@@ -5,3 +5,22 @@ teladoc@FVFFM3E1Q05N app % docker build -t getting-started .
 # get error message from docker build
 teladoc@FVFFM3E1Q05N app % docker build -t getting-started . 2>&1 | grep "error Your lockfile needs to be updated, but yarn was run with"                 
 #12 1.115 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+
+
+#2-nd approach
+docker build -t getting-started \app 2> builder.log
+cat builder.log | grep "error Your lockfile needs to be updated, but yarn was run with"
+
+#3-rd approach
+result=$((docker build -t getting-started \app) 2>&1)
+echo $result
+echo $result | grep "error" 
+#13 0.749 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+
+#4-rd approach
+result=$((docker build -t getting-started \app) 2>&1); echo $result | grep "error"
+#15 0.857 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+
+#5-th approach
+docker build -t getting-started \app 2>&1 | grep "error"
+#11 1.024 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.

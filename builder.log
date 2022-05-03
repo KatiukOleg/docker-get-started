@@ -1,0 +1,80 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:619227974623b0b414ae600418be30d9730c41fce457c999ca4794a46a69f01d
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:a5e7848333243b0d894945d2489dbab3f806523511a10718e4d5885d634ce952
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1
+#3 sha256:5511bf222770ecb09bae16a5e9dc6ddaf6633b05719203c5e2b00644727cd62f
+#3 ...
+
+#4 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#4 sha256:ed7113811edada2343e8daab84230c309d05caffdb18634573e1da6e3cb26c4b
+#4 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1
+#3 sha256:5511bf222770ecb09bae16a5e9dc6ddaf6633b05719203c5e2b00644727cd62f
+#3 DONE 1.8s
+
+#5 docker-image://docker.io/docker/dockerfile:1@sha256:91f386bc3ae6cd5585fbd02f811e295b4a7020c23c7691d686830bf6233e91ad
+#5 sha256:0e2c55b548c6dab62d6c19b6efd347f238e95b2edd6e2e8b5c0ec278d0dcab5d
+#5 CACHED
+
+#7 [internal] load build definition from Dockerfile
+#7 sha256:b58a6d614e724e79ba806255128105e521abd605b1690fc63927668a60ba73ce
+#7 DONE 0.0s
+
+#6 [internal] load .dockerignore
+#6 sha256:8c0a938a4da1e42516c39d3f7ad45620038c62ddca3dcf5f53f22d186bf5067b
+#6 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/node:12-alpine
+#8 sha256:50259a4731b8bfb2506a7214cafca7e9f7efa7d031abdb8680b076e490a8880a
+#8 ...
+
+#9 [auth] library/node:pull token for registry-1.docker.io
+#9 sha256:4f8291588624c2abbb0262d3e04fdc90df6dda7eea2263cb8143e40e373053b8
+#9 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/node:12-alpine
+#8 sha256:50259a4731b8bfb2506a7214cafca7e9f7efa7d031abdb8680b076e490a8880a
+#8 DONE 0.9s
+
+#10 [1/5] FROM docker.io/library/node:12-alpine@sha256:d4b15b3d48f42059a15bd659be60afe21762aae9d6cbea6f124440895c27db68
+#10 sha256:1f2c0c34653e8f0456c192013884412c379e2a18ce7f4699dc4c7cccb77a8a3e
+#10 DONE 0.0s
+
+#13 [internal] load build context
+#13 sha256:f98a14acfb58c7ae45fd5d324e669fd554708671ef68e8d3ae8737f1a97cb846
+#13 transferring context: 3.05kB done
+#13 DONE 0.0s
+
+#11 [2/5] RUN apk add --no-cache python2 g++ make
+#11 sha256:1cad6fa1adf5c41980188e989030c9f130ff71522c5c02b5411b321869999510
+#11 CACHED
+
+#12 [3/5] WORKDIR /app
+#12 sha256:a64c0b87530ea010f4ba3bea522b7bc5478af523af7942d9bf3a2a70baf90b4d
+#12 CACHED
+
+#14 [4/5] COPY . .
+#14 sha256:95a8a643992196cb13324b5a5e58a4afc62d590e5564942806a9334e1ce58f38
+#14 DONE 0.0s
+
+#15 [5/5] RUN yarn install --production --frozen-lockfile
+#15 sha256:b5295dd25ea1f90c3a086b1eead856f3fe59175730d6bde26a20b78f439b953d
+#15 0.270 yarn install v1.22.18
+#15 0.324 [1/4] Resolving packages...
+#15 0.373 warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+#15 0.377 warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^3.0.0"
+#15 0.816 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+#15 0.816 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+#15 ERROR: executor failed running [/bin/sh -c yarn install --production --frozen-lockfile]: exit code: 1
+------
+ > [5/5] RUN yarn install --production --frozen-lockfile:
+------
+executor failed running [/bin/sh -c yarn install --production --frozen-lockfile]: exit code: 1
